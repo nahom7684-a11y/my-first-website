@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahom's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Nahom's Website!</h1>
+        <p>I'm learning web development!</p>
+    </header>
+
+    <main>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="my-photo.jpg" alt="My photo" class="profile-photo">
+            <p>Hello! My name is Nahom. I'm learning HTML, CSS, and JavaScript.</p>
+            <button id="welcomeButton">Click Me!</button>
+            <p id="welcomeMessage"></p>
+        </section>
+
+        <section class="card">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Learning programming</li>
+                <li>Listening to music</li>
+                <li>Playing football</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>My Counter</h2>
+            <p>Button clicks: <span id="count">0</span></p>
+            <button id="countButton">Increase Counter</button>
+        </section>
+
+        <section class="card">
+            <h2>Age Checker</h2>
+            <input type="number" id="ageInput" placeholder="Enter your age">
+            <button id="checkAgeButton">Check Age</button>
+            <p id="ageResult"></p>
+        </section>
+
+        <section class="card">
+            <h2>JavaScript Loops</h2>
+            <p>Display my hobbies using a loop.</p>
+            <button id="showHobbiesButton">Show My Hobbies</button>
+            <ol id="hobbyList"></ol>
+        </section>
+
+        <section class="card">
+            <h2>Function Calculator</h2>
+            <input type="number" id="firstNumber" placeholder="First number">
+            <input type="number" id="secondNumber" placeholder="Second number">
+            <button id="calculateButton">Calculate Sum</button>
+            <h3 id="calculationResult"></h3>
+        </section>
+
+        <section class="card">
+            <h2>My Hobbies Manager</h2>
+            <p>These hobbies are stored in a JavaScript array:</p>
+            <ul id="arrayHobbyList"></ul>
+
+            <input type="text" id="newHobby" placeholder="Enter a new hobby">
+            <button id="addHobbyButton">Add Hobby</button>
+            <p id="hobbyMessage"></p>
+        </section>
+
+        <section class="card">
+            <h2>My JavaScript Profile</h2>
+            <button id="showProfileButton">Show My Profile</button>
+            <div id="profileResult"></div>
+        </section>
+
+        <!-- NEW DOM MANIPULATION PROJECT -->
+        <section class="card">
+            <h2>My To-Do List</h2>
+            <p>Add tasks and manage your daily activities!</p>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+                maxlength="100"
+            >
+
+            <button id="addTaskButton">Add Task</button>
+
+            <p id="taskMessage" aria-live="polite"></p>
+
+            <p>Total tasks: <span id="taskCount">0</span></p>
+
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- CHARACTER COUNTER -->
+        <section class="card">
+            <h2>Message Character Counter</h2>
+
+            <textarea
+                id="messageInput"
+                placeholder="Type something here..."
+                maxlength="200"
+            ></textarea>
+
+            <p>Characters: <span id="characterCount">0</span> / 200</p>
+        </section>
+
+        <section class="card">
+            <h2>Contact Me</h2>
+
+            <form id="contactForm">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <p id="formMessage"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created by Nahom | My Learning Journey</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
