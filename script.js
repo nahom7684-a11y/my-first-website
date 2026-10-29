@@ -185,8 +185,8 @@ showProfileButton.addEventListener("click", function () {
 // 8. TO-DO LIST - DOM MANIPULATION
 // ===================================
 
-// Store tasks in an array
-const tasks = [];
+// Load saved tasks from the browser (or start with an empty list)
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 // Select HTML elements
 const taskInput = document.getElementById("taskInput");
@@ -260,7 +260,13 @@ function displayTasks() {
 
     // Update the total task count
     taskCount.textContent = tasks.length;
+
+    // Save tasks in the browser
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
+// Show saved tasks when the page loads
+displayTasks();
 
 
 // Add a new task
@@ -319,7 +325,7 @@ const formMessage = document.getElementById("formMessage");
 contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    formMessage.textContent = "Thank you! Your message has been received.";
+    formMessage.textContent = "Thanks! This demo form doesn't send messages yet.";
 
     contactForm.reset();
 });
